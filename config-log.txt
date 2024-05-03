@@ -1,0 +1,20 @@
+sysadmin@integration-db:~$ sudo systemctl status mongod.service
+○ mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
+       Docs: https://docs.mongodb.org/manual
+sysadmin@integration-db:~$ sudo systemctl start mongod.service
+sysadmin@integration-db:~$ sudo systemctl status mongod.service
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-05-03 18:41:59 +07; 10s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 20167 (mongod)
+     Memory: 74.0M
+        CPU: 975ms
+     CGroup: /system.slice/mongod.service
+             └─20167 /usr/bin/mongod --config /etc/mongod.conf
+
+พ.ค. 03 18:41:59 integration-db systemd[1]: Started MongoDB Database Server.
+พ.ค. 03 18:41:59 integration-db mongod[20167]: {"t":{"$date":"2024-05-03T11:41:59.150Z"},"s":"I",  "c":"CONTROL",  "id":7484500, "ctx":"main","msg":"Environment variable MONGODB_CO>
+sysadmin@integration-db:~$
